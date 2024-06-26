@@ -12,10 +12,10 @@ const root = createRoot(rootElement);
 
 root.render(
   <Auth0Provider
-    domain="dev-i4mlvjcd6ohy64h3.us.auth0.com"
-    clientId="fYHbPS0APmjb8xIwvpsdBE3V4CuZhv6O"
+    domain="dev-z8tivme55voqva1b.us.auth0.com"
+    clientId="374NJxdkkNUXdhFPf045sn7xBY4vsaOQ"
     authorizationParams={{
-      redirect_uri: window.location.origin,
+      redirect_uri: "https://dev-z8tivme55voqva1b.us.auth0.com",
     }}
   >
     <BrowserRouter>
