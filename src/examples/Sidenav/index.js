@@ -157,17 +157,6 @@ function Sidenav({ color, brandName, routes, ...rest }) {
               })
             }
           >
-            <VuiBox
-              display="flex"
-              sx={
-                ((theme) => sidenavLogoLabel(theme, { miniSidenav, transparentSidenav }),
-                {
-                  mr: miniSidenav || (miniSidenav && transparentSidenav) ? 0 : 1,
-                })
-              }
-            >
-              <SimmmpleLogo size="24px" />
-            </VuiBox>
             <VuiTypography
               variant="button"
               textGradient={true}
@@ -184,7 +173,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
                 })
               }
             >
-              TrendAi
+              TrendFlare.ai
             </VuiTypography>
           </VuiBox>
         </VuiBox>

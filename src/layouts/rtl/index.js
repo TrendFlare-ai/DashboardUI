@@ -26,7 +26,7 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import OrderOverview from "layouts/rtl/components/OrderOverview";
 import Projects from "layouts/rtl/components/Projects";
 import ReferralTracking from "layouts/rtl/components/ReferralTracking";
-import SatisfactionRate from "layouts/rtl/components/SatisfactionRate";
+import ImpressionScore from "layouts/rtl/components/SatisfactionRate";
 
 // Dashboard layout components
 import WelcomeMark from "layouts/rtl/components/WelcomeMark";
@@ -99,7 +99,7 @@ function RTL() {
               <WelcomeMark />
             </Grid>
             <Grid item xs={12} lg={6} xl={3}>
-              <SatisfactionRate />
+              <ImpressionScore />
             </Grid>
             <Grid item xs={12} lg={6} xl={4}>
               <ReferralTracking />

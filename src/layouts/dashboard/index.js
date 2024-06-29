@@ -2,7 +2,12 @@
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import { Card, LinearProgress, Stack } from "@mui/material";
-
+import * as React from "react";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormHelperText from "@mui/material/FormHelperText";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
@@ -23,7 +28,7 @@ import colors from "assets/theme/base/colors";
 import WelcomeMark from "layouts/dashboard/components/WelcomeMark";
 import Projects from "layouts/dashboard/components/Projects";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
-import SatisfactionRate from "layouts/dashboard/components/SatisfactionRate";
+import ImpressionScore from "layouts/dashboard/components/ImpressionScore";
 import ReferralTracking from "layouts/dashboard/components/ReferralTracking";
 
 // React icons
@@ -41,16 +46,22 @@ import { lineChartDataDashboard } from "layouts/dashboard/data/lineChartData";
 import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptions";
 import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
+import { useState } from "react";
 
 function Dashboard() {
   const { gradients } = colors;
   const { cardContent } = gradients;
+  const [age, setAge] = useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <VuiBox py={3}>
-        <VuiBox mb={3}>
+        {/* <VuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} xl={3}>
               <MiniStatisticsCard
@@ -80,19 +91,19 @@ function Dashboard() {
               <MiniStatisticsCard
                 title={{ text: "total sales" }}
                 count="$103,430"
-                percentage={{ color: "success", text: "+5%" }}
+                percentage={{ color: "success", text: "+5%" }
                 icon={{ color: "info", component: <FaShoppingCart size="20px" color="white" /> }}
               />
             </Grid>
           </Grid>
-        </VuiBox>
+        </VuiBox> */}
         <VuiBox mb={3}>
           <Grid container spacing="18px">
             <Grid item xs={12} lg={12} xl={5}>
               <WelcomeMark />
             </Grid>
             <Grid item xs={12} lg={6} xl={3}>
-              <SatisfactionRate />
+              <ImpressionScore />
             </Grid>
             <Grid item xs={12} lg={6} xl={4}>
               <ReferralTracking />
@@ -107,11 +118,12 @@ function Dashboard() {
                   <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
                     Sales Overview
                   </VuiTypography>
+
                   <VuiBox display="flex" alignItems="center" mb="40px">
                     <VuiTypography variant="button" color="success" fontWeight="bold">
                       +5% more{" "}
                       <VuiTypography variant="button" color="text" fontWeight="regular">
-                        in 2021
+                        in May 2024
                       </VuiTypography>
                     </VuiTypography>
                   </VuiBox>
